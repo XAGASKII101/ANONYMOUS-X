@@ -18,8 +18,6 @@ if (typeof File === "undefined") {
 require("./lib/polyfills")
 require("./settings")
 const { Boom } = require("@hapi/boom")
-const express = require("express")
-const bodyParser = require("body-parser")
 const fs = require("fs")
 const chalk = require("chalk")
 const FileType = require("file-type")
@@ -105,50 +103,6 @@ const question = (text) => {
   }
   return new Promise((resolve) => rl.question(text, resolve))
 }
-
-// Express Web Server
-const app = express()
-const PORT = process.env.PORT || 3000
-
-app.use(bodyParser.urlencoded({ extended: true }))
-
-let pairingCodeWeb = null
-let phoneNumberWeb = null
-
-app.get("/", (req, res) => {
-  res.send(`
-    <html>
-      <head><title>${global.botname} - Pairing</title></head>
-      <body style="font-family:sans-serif; padding:2rem;">
-        <h2>🔗 Pair Your WhatsApp Bot</h2>
-        <form action="/pair" method="post">
-          <label>Enter WhatsApp number (e.g. 2348107516059):</label><br/>
-          <input type="text" name="number" style="padding:0.5rem; width:300px;" required />
-          <button type="submit" style="padding:0.5rem 1rem;">Get Pairing Code</button>
-        </form>
-        ${pairingCodeWeb ? `<h3>✅ Your Pairing Code: <code>${pairingCodeWeb}</code></h3>` : ""}
-      </body>
-    </html>
-  `)
-})
-
-app.post("/pair", async (req, res) => {
-  phoneNumberWeb = req.body.number.trim()
-  console.log("📲 Requested pairing for:", phoneNumberWeb)
-
-  try {
-    const sock = await startXeonBotInc(phoneNumberWeb)
-    res.redirect("/")
-  } catch (err) {
-    console.error("❌ Pairing failed", err)
-    res.send("Error: " + err.message)
-  }
-})
-
-app.listen(PORT, () => {
-  console.log(`🌍 Web server running on port ${PORT}`)
-})
-
 
 async function startXeonBotInc() {
   const { version, isLatest } = await fetchLatestBaileysVersion()
@@ -262,21 +216,11 @@ async function startXeonBotInc() {
 
     console.log(chalk.cyan("\n🔗 Device not registered! Starting pairing process...\n"))
     
-   let cleanNumber
-if (phoneNumber) {
-  cleanNumber = phoneNumber.replace(/[^0-9]/g, "")
-} else if (phoneNumberWeb) {
-  cleanNumber = phoneNumberWeb.replace(/[^0-9]/g, "")
-} else {
-  const phoneNumberInput = await question(
-    chalk.bgBlack(
-      chalk.greenBright(`📱 Please enter your WhatsApp number:\nFormat: 2348107516059\n`)
+    const phoneNumberInput = await question(
+      chalk.bgBlack(
+        chalk.greenBright(`📱 Please enter your WhatsApp number:\nFormat: 2348107516059 (country code + number, no + or spaces)\n\n💡 Enter your number: `),
+      ),
     )
-  )
-  cleanNumber = phoneNumberInput.replace(/[^0-9]/g, "")
-}
-pairingCodeWeb = await XeonBotInc.requestPairingCode(cleanNumber)
-
 
     const cleanNumber = phoneNumberInput.replace(/[^0-9]/g, "")
 
@@ -427,4 +371,4 @@ fs.watchFile(file, () => {
   console.log(chalk.redBright(`Update ${__filename}`))
   delete require.cache[file]
   require(file)
-})
+}) 
