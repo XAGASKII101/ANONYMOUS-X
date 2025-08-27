@@ -7,7 +7,7 @@
 
 <p align="center">
   <b>The Ultimate WhatsApp Bot Experience</b><br>
-  Developed by <a href="https://github.com/alexius-dubem">Alexius Dubem</a>
+  Developed by <a href="https://github.com/AlexiusDubem">Alexius Dubem</a>
 </p>
 
 ---
@@ -282,5 +282,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 </p>
 
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/alexius-dubem">Alexius Dubem</a>
+  Made with ❤️ by <a href="https://github.com/AlexiusDubem">Alexius Dubem</a>
 </p>
