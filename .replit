@@ -1,0 +1,12 @@
+modules = ["nodejs-20"]
+
+[nix]
+channel = "stable-25_05"
+
+[deployment]
+run = ["sh", "-c", "npm run dev"]
+
+run = "npm run dev"
+
+[env]
+NODE_VERSION = "20.18.1"

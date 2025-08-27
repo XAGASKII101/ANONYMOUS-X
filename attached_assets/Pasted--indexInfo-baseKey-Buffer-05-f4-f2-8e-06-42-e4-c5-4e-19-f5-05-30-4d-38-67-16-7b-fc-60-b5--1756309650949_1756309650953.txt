@@ -1,0 +1,173 @@
+  indexInfo: {
+    baseKey: <Buffer 05 f4 f2 8e 06 42 e4 c5 4e 19 f5 05 30 4d 38 67 16 7b fc 60 b5 56 94 0e fa 1c a7 08 87 eb 7d 8a 58>,
+    baseKeyType: 1,
+    closed: -1,
+    used: 1756309559924,
+    created: 1756309559924,
+    remoteIdentityKey: <Buffer 05 ef 5d 7c 50 f1 8e f9 eb 33 ae 94 71 c6 4a dc 45 3e 03 c9 b9 e0 82 c1 16 b4 c9 2c 16 3a 2c db 23>
+  },
+  pendingPreKey: {
+    signedKeyId: 4,
+    baseKey: <Buffer 05 f4 f2 8e 06 42 e4 c5 4e 19 f5 05 30 4d 38 67 16 7b fc 60 b5 56 94 0e fa 1c a7 08 87 eb 7d 8a 58>,
+    preKeyId: 14998255
+  }
+}
+❌ Connection closed Error: Stream Errored (conflict)
+    at WebSocketClient.<anonymous> (/home/runner/workspace/node_modules/@whiskeysockets/baileys/lib/Socket/socket.js:524:13)
+    at WebSocketClient.emit (node:events:524:28)
+    at /home/runner/workspace/node_modules/@whiskeysockets/baileys/lib/Socket/socket.js:241:35
+    at Object.decodeFrame (/home/runner/workspace/node_modules/@whiskeysockets/baileys/lib/Utils/noise-handler.js:144:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  data: { tag: 'stream:error', attrs: {}, content: [ [Object] ] },
+  isBoom: true,
+  isServer: false,
+  output: {
+    statusCode: 440,
+    payload: {
+      statusCode: 440,
+      error: 'Unknown',
+      message: 'Stream Errored (conflict)'
+    },
+    headers: {}
+  }
+} Reconnecting: true
+🔄 Attempting to reconnect...
+⚠️ The printQRInTerminal option has been deprecated. You will no longer receive QR codes in the terminal automatically. Please listen to the connection.update event yourself and handle the QR your way. You can remove this message by removing this opttion. This message will be removed in a future version.
+🔄 Connecting to WhatsApp...
+✅ Successfully connected to WhatsApp!
+🌿Connected to => {
+  "id": "2348107516059:12@s.whatsapp.net",
+  "lid": "87145490464795:12@lid",
+  "name": "Xågå"
+}
+
+
+                  [ ANONYMOUS X ]
+
+
+< ================================================== >
+
+🔰 YT CHANNEL: ANONYMOUS X
+🔰 GITHUB: anonymousx
+🔰 WA NUMBER: 910000000000,917023951514
+🔰 CREDIT: ANONYMOUS X
+🔰 🤖 Bot Connected Successfully! ✅
+❌ Connection closed Error: Stream Errored (conflict)
+    at WebSocketClient.<anonymous> (/home/runner/workspace/node_modules/@whiskeysockets/baileys/lib/Socket/socket.js:524:13)
+    at WebSocketClient.emit (node:events:524:28)
+    at /home/runner/workspace/node_modules/@whiskeysockets/baileys/lib/Socket/socket.js:241:35
+    at Object.decodeFrame (/home/runner/workspace/node_modules/@whiskeysockets/baileys/lib/Utils/noise-handler.js:144:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  data: { tag: 'stream:error', attrs: {}, content: [ [Object] ] },
+  isBoom: true,
+  isServer: false,
+  output: {
+    statusCode: 440,
+    payload: {
+      statusCode: 440,
+      error: 'Unknown',
+      message: 'Stream Errored (conflict)'
+    },
+    headers: {}
+  }
+} Reconnecting: true
+🔄 Attempting to reconnect...
+⚠️ The printQRInTerminal option has been deprecated. You will no longer receive QR codes in the terminal automatically. Please listen to the connection.update event yourself and handle the QR your way. You can remove this message by removing this opttion. This message will be removed in a future version.
+🔄 Connecting to WhatsApp...
+✅ Successfully connected to WhatsApp!
+🌿Connected to => {
+  "id": "2348107516059:12@s.whatsapp.net",
+  "lid": "87145490464795:12@lid",
+  "name": "Xågå"
+}
+
+
+                  [ ANONYMOUS X ]
+
+
+< ================================================== >
+
+🔰 YT CHANNEL: ANONYMOUS X
+🔰 GITHUB: anonymousx
+🔰 WA NUMBER: 910000000000,917023951514
+🔰 CREDIT: ANONYMOUS X
+🔰 🤖 Bot Connected Successfully! ✅
+❌ Connection closed Error: Stream Errored (conflict)
+    at WebSocketClient.<anonymous> (/home/runner/workspace/node_modules/@whiskeysockets/baileys/lib/Socket/socket.js:524:13)
+    at WebSocketClient.emit (node:events:524:28)
+    at /home/runner/workspace/node_modules/@whiskeysockets/baileys/lib/Socket/socket.js:241:35
+    at Object.decodeFrame (/home/runner/workspace/node_modules/@whiskeysockets/baileys/lib/Utils/noise-handler.js:144:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  data: { tag: 'stream:error', attrs: {}, content: [ [Object] ] },
+  isBoom: true,
+  isServer: false,
+  output: {
+    statusCode: 440,
+    payload: {
+      statusCode: 440,
+      error: 'Unknown',
+      message: 'Stream Errored (conflict)'
+    },
+    headers: {}
+  }
+} Reconnecting: true
+🔄 Attempting to reconnect...
+⚠️ The printQRInTerminal option has been deprecated. You will no longer receive QR codes in the terminal automatically. Please listen to the connection.update event yourself and handle the QR your way. You can remove this message by removing this opttion. This message will be removed in a future version.
+🔄 Connecting to WhatsApp...
+✅ Successfully connected to WhatsApp!
+🌿Connected to => {
+  "id": "2348107516059:12@s.whatsapp.net",
+  "lid": "87145490464795:12@lid",
+  "name": "Xågå"
+}
+
+
+                  [ ANONYMOUS X ]
+
+
+< ================================================== >
+
+🔰 YT CHANNEL: ANONYMOUS X
+🔰 GITHUB: anonymousx
+🔰 WA NUMBER: 910000000000,917023951514
+🔰 CREDIT: ANONYMOUS X
+🔰 🤖 Bot Connected Successfully! ✅
+❌ Connection closed Error: Stream Errored (conflict)
+    at WebSocketClient.<anonymous> (/home/runner/workspace/node_modules/@whiskeysockets/baileys/lib/Socket/socket.js:524:13)
+    at WebSocketClient.emit (node:events:524:28)
+    at /home/runner/workspace/node_modules/@whiskeysockets/baileys/lib/Socket/socket.js:241:35
+    at Object.decodeFrame (/home/runner/workspace/node_modules/@whiskeysockets/baileys/lib/Utils/noise-handler.js:144:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  data: { tag: 'stream:error', attrs: {}, content: [ [Object] ] },
+  isBoom: true,
+  isServer: false,
+  output: {
+    statusCode: 440,
+    payload: {
+      statusCode: 440,
+      error: 'Unknown',
+      message: 'Stream Errored (conflict)'
+    },
+    headers: {}
+  }
+} Reconnecting: true
+🔄 Attempting to reconnect...
+⚠️ The printQRInTerminal option has been deprecated. You will no longer receive QR codes in the terminal automatically. Please listen to the connection.update event yourself and handle the QR your way. You can remove this message by removing this opttion. This message will be removed in a future version.
+🔄 Connecting to WhatsApp...
+✅ Successfully connected to WhatsApp!
+🌿Connected to => {
+  "id": "2348107516059:12@s.whatsapp.net",
+  "lid": "87145490464795:12@lid",
+  "name": "Xågå"
+}
+
+
+                  [ ANONYMOUS X ]
+
+
+< ================================================== >
+
+🔰 YT CHANNEL: ANONYMOUS X
+🔰 GITHUB: anonymousx
+🔰 WA NUMBER: 910000000000,917023951514
+🔰 CREDIT: ANONYMOUS X
