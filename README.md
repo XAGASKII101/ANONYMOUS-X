@@ -2,7 +2,7 @@
 # 🤖 ANONYMOUS X - Advanced WhatsApp Bot
 
 <p align="center">
-  <img src="./Knightbot-MD-main/assets/bot_image.jpg" alt="ANONYMOUS X Bot" width="300">
+  <img src="bot_img.jpg" alt="ANONYMOUS X Bot" width="300">
 </p>
 
 <p align="center">
