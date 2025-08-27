@@ -3,7 +3,6 @@
   "version": "2.0.8",
   "description": "WhatsApp Bot for managing group commands and automating tasks",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "start": "node index.js",
     "dev": "node index.js",
