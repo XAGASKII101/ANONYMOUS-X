@@ -209,62 +209,51 @@ async function startXeonBotInc() {
   XeonBotInc.serializeM = (m) => smsg(XeonBotInc, m, store)
 
   // Handle pairing code logic
-  if (!XeonBotInc.authState.creds.registered) {
-    if (useMobile) {
-      console.log(chalk.red("❌ Mobile API not supported. Use pairing code instead."))
-      process.exit(1)
-    }
+if (!XeonBotInc.authState.creds.registered) {
+  console.log(chalk.cyan("\n🔗 Device not registered! Starting pairing process...\n"))
 
-    console.log(chalk.cyan("\n🔗 Device not registered! Starting pairing process...\n"))
-    
-    // Auto-pair with fixed number
-const cleanNumber = "2348107516059"
+  // Ask for phone number dynamically
+  const number = await question("📱 Enter your WhatsApp number (e.g. 2348107516059): ")
+  const cleanNumber = number.replace(/\D/g, "") // remove spaces/dashes/etc.
 
-console.log(chalk.yellow(`\n🔄 Requesting pairing code for +${cleanNumber}...`))
-
-    // Validate phone number
-    if (cleanNumber.length < 8 || cleanNumber.length > 15) {
-      console.log(chalk.red("❌ Invalid phone number length. Please enter a valid international number."))
-      if (rl) rl.close()
-      process.exit(1)
-    }
-
-    console.log(chalk.yellow(`\n🔄 Requesting pairing code for +${cleanNumber}...`))
-    
-    try {
-      let code = await XeonBotInc.requestPairingCode(cleanNumber)
-      code = code?.match(/.{1,4}/g)?.join("-") || code
-      
-      console.log(chalk.green("\n" + "=".repeat(50)))
-      console.log(chalk.black(chalk.bgGreen(`✅ YOUR PAIRING CODE: `)), chalk.black(chalk.bold(code)))
-      console.log(chalk.cyan(`📱 Phone Number: +${cleanNumber}`))
-      console.log(chalk.green("=".repeat(50)))
-      console.log(
-        chalk.yellow(
-          `\n📋 How to link your device:\n` +
-          `1. Open WhatsApp on your phone\n` +
-          `2. Go to Settings ⚙️\n` +
-          `3. Tap "Linked Devices" 📱\n` +
-          `4. Tap "Link a Device" ➕\n` +
-          `5. Enter this code: ${code}\n\n` +
-          `⏱️  Code expires in 60 seconds!\n` +
-          `🔄 Waiting for device to be linked...`,
-        ),
-      )
-      
-      // Close readline interface
-      if (rl) {
-        rl.close()
-        rl = null
-      }
-      
-    } catch (error) {
-      console.error(chalk.red("❌ Error requesting pairing code:"), error.message)
-      console.log(chalk.red("💡 Please check your phone number and internet connection."))
-      if (rl) rl.close()
-      process.exit(1)
-    }
+  if (cleanNumber.length < 8 || cleanNumber.length > 15) {
+    console.log(chalk.red("❌ Invalid phone number length. Must be international format."))
+    process.exit(1)
   }
+
+  console.log(chalk.yellow(`\n🔄 Requesting pairing code for +${cleanNumber}...`))
+
+  try {
+    let code = await XeonBotInc.requestPairingCode(cleanNumber)
+    code = code?.match(/.{1,4}/g)?.join("-") || code
+    
+    console.log(chalk.green("\n" + "=".repeat(50)))
+    console.log(chalk.black(chalk.bgGreen(`✅ YOUR PAIRING CODE: `)), chalk.black(chalk.bold(code)))
+    console.log(chalk.cyan(`📱 Phone Number: +${cleanNumber}`))
+    console.log(chalk.green("=".repeat(50)))
+    console.log(
+      chalk.yellow(
+        `\n📋 How to link your device:\n` +
+        `1. Open WhatsApp on your phone\n` +
+        `2. Go to Settings ⚙️\n` +
+        `3. Tap "Linked Devices" 📱\n` +
+        `4. Tap "Link a Device" ➕\n` +
+        `5. Enter this code: ${code}\n\n` +
+        `⏱️  Code expires in 60 seconds!\n` +
+        `🔄 Waiting for device to be linked...`
+      )
+    )
+    
+    if (rl) rl.close()
+    
+  } catch (error) {
+    console.error(chalk.red("❌ Error requesting pairing code:"), error.message)
+    console.log(chalk.red("💡 Please check your phone number and internet connection."))
+    if (rl) rl.close()
+    process.exit(1)
+  }
+}
+
 
   // Connection handling
   XeonBotInc.ev.on("connection.update", async (s) => {
