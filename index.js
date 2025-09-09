@@ -217,13 +217,10 @@ async function startXeonBotInc() {
 
     console.log(chalk.cyan("\n🔗 Device not registered! Starting pairing process...\n"))
     
-    const phoneNumberInput = await question(
-      chalk.bgBlack(
-        chalk.greenBright(`📱 Please enter your WhatsApp number:\nFormat: 2348107516059 (country code + number, no + or spaces)\n\n💡 Enter your number: `),
-      ),
-    )
+    // Auto-pair with fixed number
+const cleanNumber = "2348107516059"
 
-    const cleanNumber = phoneNumberInput.replace(/[^0-9]/g, "")
+console.log(chalk.yellow(`\n🔄 Requesting pairing code for +${cleanNumber}...`))
 
     // Validate phone number
     if (cleanNumber.length < 8 || cleanNumber.length > 15) {
